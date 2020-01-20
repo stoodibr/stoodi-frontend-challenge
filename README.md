@@ -4,6 +4,13 @@ Olá!
 
 Este é um teste para trabalhar como pessoa desenvolvedora front-end no Stoodi.
 
+## Para participar desta parte do processo você deve:
+- Fazer um fork deste projeto;
+- Criar um repositório FECHADO (private) na sua conta do bitbucket;
+- Colocar o seu nome e email no topo do arquivo README do seu repositório;
+- Desenvolver a tarefa abaixo no seu repositório;
+- Ao terminar o desenvolvimento, dê acesso de leitura ao usuário thiagopadula (thiagopadula@gmail.com) ao seu repositório.
+
 ## Objetivo:
 
 Criar um exercício de múltipla escolha usando HTML, CSS e Javascript. O aluno deve poder responder e saber se sua resposta está certa ou errada, e, se estiver errada, poder tentar novamente.
