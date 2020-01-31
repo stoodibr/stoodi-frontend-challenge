@@ -1,4 +1,4 @@
-# Stoodi front-end challenge
+# Desafio front-end do Stoodi
 
 Olá!
 
@@ -45,17 +45,22 @@ ___
 ___
 ## Critérios
 
+- Você deve pegar as informações da pergunta dessa API: `https://8zqqb4wng6.execute-api.us-east-1.amazonaws.com/dev/`
 - As alternativas são exclusivas (o aluno não deve responder mais de uma ao mesmo tempo);
 - O botão "verificar resposta" deve estar desabilitado se nenhuma alternativa estiver selecionada (*imagem 1*);
 - O botão "verificar resposta" deve estar habilitado se uma alternativa estiver selecionada (*imagem 2*);
-- Ao clicar em "verificar resposta", o aluno deve ser informado se acertou ou não, de acordo com o layout;
-- Se o aluno acertou a resposta, o botão deve ter o texto "próximo". Esse botão não tem nenhuma funcionalidade (*imagem 3*);
-- Se o aluno errou a resposta, o botão deve ter o texto "refazer" (*imagem 4*). Ao clicar nesse botão, a opção selecionada deve ficar desmarcada, o feedback de erro deve sumir e o botão deve ficar desabilitado (exatamente como quando o aluno acessa o exercício pela primeira vez).
+- Ao clicar em "verificar resposta", o componente deve fazer um POST para `https://8zqqb4wng6.execute-api.us-east-1.amazonaws.com/dev/` com um objeto contendo os seguintes dados:
+    - `exercise_id` (tipo number)
+	- `choice` (tipo string, com a letra da alternativa selecionada)
+- O POST vai retornar uma propriedade `is_correct` que informa se a alternativa enviada era a correta. Se o aluno:
+    - Acertou a resposta: a linha da alternativa selecionada deve ficar verde e o botão deve ter o texto "próximo". Esse botão não tem nenhuma funcionalidade (*imagem 3*);
+    - Errou a resposta: a linha da alternativa selecionada deve ficar vermelha e o botão deve ter o texto "refazer" (*imagem 4*). Ao clicar nesse botão, a opção selecionada deve ficar desmarcada, o feedback de erro deve sumir e o botão deve ficar desabilitado (exatamente como quando o aluno acessa o exercício pela primeira vez).
 - A página deve ficar como no layout.
 
 ## Observações
 
 - Deve-se usar HTML, CSS e Javascript. Fica a seu critério utilizar frameworks, bibliotecas ou pré-processadores;
+- Escrever testes é um diferencial;
 - Escreva todas as instruções de como rodar o projeto. Se quiser colocar mais observações, fique à vontade;
 - A fonte utilizada no layout é a Lato (https://fonts.google.com/specimen/Lato);
 - Você será avaliadx pela qualidade/funcionalidade do seu código e aderência ao layout. Desenvolva como se fosse um código de produção em um time e não uma prova ou script;
