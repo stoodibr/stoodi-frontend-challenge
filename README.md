@@ -59,7 +59,7 @@ ___
 
 ## Observações
 
-- Deve-se usar HTML, CSS e Javascript. Fica a seu critério utilizar frameworks, bibliotecas ou pré-processadores;
+- Deve-se usar HTML, CSS e Javascript. Fica a seu critério utilizar frameworks, bibliotecas ou pré-processadores, mas, se puder usar React, a gente prefere :)
 - Escrever testes é um diferencial;
 - Escreva todas as instruções de como rodar o projeto. Se quiser colocar mais observações, fique à vontade;
 - A fonte utilizada no layout é a Lato (https://fonts.google.com/specimen/Lato);
