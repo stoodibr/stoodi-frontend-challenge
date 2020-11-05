@@ -6,7 +6,7 @@ Este é um teste para trabalhar como pessoa desenvolvedora front-end no Stoodi.
 
 ## Para participar desta parte do processo você deve:
 - Fazer um fork deste projeto;
-- Criar um repositório FECHADO (private) na sua conta do bitbucket;
+- Criar um repositório FECHADO (private) na sua conta do GitHub;
 - Colocar o seu nome e email no topo do arquivo README do seu repositório;
 - Desenvolver a tarefa abaixo no seu repositório;
 - Ao terminar o desenvolvimento, dê acesso de leitura ao usuário thiagopadula (thiagopadula@gmail.com) ao seu repositório.
@@ -63,5 +63,5 @@ ___
 - Escrever testes é um diferencial;
 - Escreva todas as instruções de como rodar o projeto. Se quiser colocar mais observações, fique à vontade;
 - A fonte utilizada no layout é a Lato (https://fonts.google.com/specimen/Lato);
-- Você será avaliadx pela qualidade/funcionalidade do seu código e aderência ao layout. Desenvolva como se fosse um código de produção em um time e não uma prova ou script;
+- Avaliaremos qualidade/funcionalidade do seu código e aderência ao layout. Desenvolva como se fosse um código de produção em um time e não uma prova ou script;
 - Estamos à disposição para ajudar com dúvidas ou dificuldades, é só entrar em contato :)
