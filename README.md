@@ -5,11 +5,11 @@ Olá!
 Este é um teste para trabalhar como pessoa desenvolvedora front-end no Stoodi.
 
 ## Para participar desta parte do processo você deve:
-- Fazer um fork deste projeto;
-- Criar um repositório FECHADO (private) na sua conta do GitHub;
-- Colocar o seu nome e email no topo do arquivo README do seu repositório;
-- Desenvolver a tarefa abaixo no seu repositório;
-- Ao terminar o desenvolvimento, dê acesso de leitura ao usuário thiagopadula (thiagopadula@gmail.com) ao seu repositório.
+- Clonar esse repositório;
+- Criar uma branch com o nome observando o padrão `desafio-nome-sobrenome` (por exemplo: `desafio-maria-silva`);
+- Desenvolver a tarefa abaixo na branch que você criou;
+- Colocar no arquivo Readme: seu nome, email, instruções de como rodar o projeto e outras observações que julgar adequadas;
+- Ao terminar o desenvolvimento, abra um pull request para a branch `main`. Marque o usuário `thiagopadula` como revisor.
 
 ## Objetivo:
 
@@ -61,7 +61,6 @@ ___
 
 - Deve-se usar HTML, CSS e Javascript. Fica a seu critério utilizar frameworks, bibliotecas ou pré-processadores, mas, se puder usar React, a gente prefere :)
 - Escrever testes é um diferencial;
-- Escreva todas as instruções de como rodar o projeto. Se quiser colocar mais observações, fique à vontade;
 - A fonte utilizada no layout é a Lato (https://fonts.google.com/specimen/Lato);
 - Avaliaremos qualidade/funcionalidade do seu código e aderência ao layout. Desenvolva como se fosse um código de produção em um time e não uma prova ou script;
 - Estamos à disposição para ajudar com dúvidas ou dificuldades, é só entrar em contato :)
