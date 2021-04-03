@@ -1,17 +1,19 @@
-test('Enviar resposta e verificar retorno da propriedade is_correct', () => {
-  const answer = { exercise_id: 3473, choice: 'a' };
+import answerQuestion from '../../services/answerQuestion';
 
-  expect(answerQuestion(answer)).toHaveProperty('is_correct');
+test('Enviar resposta e verificar retorno da propriedade is_correct', async () => {
+  const answer = { questionId: 3473, questionChoice: 'a' };
+
+  expect(await answerQuestion(answer)).toHaveProperty('is_correct');
 });
 
-test('Enviar resposta incorreta e receber false', () => {
-  const answer = { exercise_id: 3473, choice: 'a' };
+test('Enviar resposta incorreta e receber false', async () => {
+  const answer = { questionId: 3473, questionChoice: 'a' };
 
-  expect(answerQuestion(answer)).toHaveProperty('is_correct', false);
+  expect(await answerQuestion(answer)).toHaveProperty('is_correct', false);
 });
 
-test('Enviar resposta correta e receber true', () => {
-  const answer = { exercise_id: 3473, choice: 'b' };
+test('Enviar resposta correta e receber true', async () => {
+  const answer = { questionId: 3473, questionChoice: 'b' };
 
-  expect(answerQuestion(answer)).toHaveProperty('is_correct', true);
+  expect(await answerQuestion(answer)).toHaveProperty('is_correct', true);
 });
