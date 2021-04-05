@@ -1,0 +1,95 @@
+# Stoodi-Front-End Challenge
+
+Este desafio consiste no desenvolvimento de uma tela para recuperar perguntas em uma API, deixar o usuário selecionar a resposta e validar a resposta na API, retornando na tela se o usuário acertou ou não a pergunta.
+
+Desenvolvedor {
+  nome: Paulo Marques,
+  e-mail: paulomarquestelles@gmail.com
+  }
+  
+
+
+## :pushpin: Objetivos e desafios
+
+Objetivo: Criar um exercício de múltipla escolha usando HTML, CSS e Javascript. O aluno deve poder responder e saber se sua resposta está certa ou errada, e, se estiver errada, poder tentar novamente.
+
+Desafios:
+
+- [x] Você deve pegar as informações da pergunta dessa API: https://8zqqb4wng6.execute-api.us-east-1.amazonaws.com/dev/
+- [x] As alternativas são exclusivas (o aluno não deve responder mais de uma ao mesmo tempo).
+- [x] O botão "verificar resposta" deve estar desabilitado se nenhuma alternativa estiver selecionada (imagem 1).
+- [x] O botão "verificar resposta" deve estar habilitado se uma alternativa estiver selecionada (imagem 2).
+- [x] Ao clicar em "verificar resposta", o componente deve fazer um POST para https://8zqqb4wng6.execute-api.us-east-1.amazonaws.com/dev/ com um objeto contendo os seguintes dados: 
+    - exercise_id (tipo number)
+    - choice (tipo string, com a letra da alternativa selecionada)
+- [x] O POST vai retornar uma propriedade is_correct que informa se a alternativa enviada era a correta. Se o aluno:  
+    - Acertou a resposta: a linha da alternativa selecionada deve ficar verde e o botão deve ter o texto "próximo". Esse botão não tem nenhuma funcionalidade (imagem 3).
+    - Errou a resposta: a linha da alternativa selecionada deve ficar vermelha e o botão deve ter o texto "refazer" (imagem 4). Ao clicar nesse botão, a opção selecionada deve ficar desmarcada, o feedback de erro deve sumir e o botão deve ficar desabilitado (exatamente como quando o aluno acessa o exercício pela primeira vez).
+- [x] A página deve ficar como no layout.
+- [x] Filter tasks by status. / Filtrar tarefas por status.
+- [x] Responsive layout (mobile, tablet and desktop). / Layout responsivo (mobile, tablet e desktop).
+
+### Imagem 1
+![Image 1](https://camo.githubusercontent.com/1388b1f5a82171b017416ab0ca543cdc9f539e7a4fa89cf049014cf4632c54c9/68747470733a2f2f7374617469632e73746f6f64692e636f6d2e62722f66726f6e74656e642d6368616c6c656e67652f74656c612d312e706e67)
+
+### Imagem 2
+![Image 2](https://camo.githubusercontent.com/f193b049113cef705c46ddd6080817e3e31d7ab81953b5f7b5b53104413d373e/68747470733a2f2f7374617469632e73746f6f64692e636f6d2e62722f66726f6e74656e642d6368616c6c656e67652f74656c612d322e706e67)
+
+### Imagem 3
+![Image 3](https://camo.githubusercontent.com/f21e29b8022e4ffd8d174bd40b7662700cd5c29c7a32f16ab0a210619a00ee26/68747470733a2f2f7374617469632e73746f6f64692e636f6d2e62722f66726f6e74656e642d6368616c6c656e67652f74656c612d33612e706e67)
+
+### Imagem 4
+![Image 4](https://camo.githubusercontent.com/ee0aa263f7dd661c982522e4607a10bae18055aea53c261253964d65a805d99f/68747470733a2f2f7374617469632e73746f6f64692e636f6d2e62722f66726f6e74656e642d6368616c6c656e67652f74656c612d33622e706e67)
+
+
+## :rocket: Technologies / Tecnologias
+
+- React
+- Styled-components
+- Javascript
+- Yarn
+
+
+## :technologist: How to use / Como utilizar
+
+
+Inicialmente deve começar baixando o projeto em sua máquina.
+
+### :computer: Initializing / Iniciando
+
+Para iniciar você deve rodar o primeiro comando dentro da pasta que você baixou o projeto para instalar todas as dependências. Após a instalação que pode demorar alguns minutos dependendo da sua internet, você poderá compilar e executar o programa utilizando o segundo comando.
+
+`yarn install`
+</br>
+`yarn start`
+
+### :building_construction: Padrões de Projeto
+
+#### VS Code: 
+
+É um editor de código fonte. Necessário para instalar algumas extensões para padronização do projeto.
+
+#### Eslint: 
+
+Ferramenta para padronização dos códigos dentro do projeto, fazendo com que independete de quem está programando o projeto mantenha padrões de semantica e de escrita. Foi configurado no projeto o estilo do AirBnb que é um dos mais utilizados como padrão. Para alterar alguma configuração do mesmo é necessário alterar no arquivo `.eslintrc.json`. É recomendável instalar também a extensão do Eslint em sua máquina local, o mesmo está disponível na loja de extensões do vsCode.
+
+#### Prettier: 
+
+É um formatador de código que junto com o Eslint ajuda na padronização do código, inserção de ponto e virgula, quando serão feitas algumas quebras de código. Neste projeto ele está associado ao eslint por uma dependência instalada. Para alterações no padrão do Prettier é necessário alterar dentro do arquivo `.prettierrc`. É recomendável instalar também a extensão do Prettier em sua máquina local, o mesmo está disponível na loja de extensões do vsCode.
+
+#### EditorConfig: 
+
+É uma ferramenta utilizada para padronizar algumas configurações dentro do VsCode, evitando assim que cada Dev precise trocar suas configurações de ambiente do VsCode para cada projeto, ele substitui as configurações padrões do VsCode para apenas aquele projeto. Neste caso estamos utilizando para manter a identação do código padronizado. Para alterações no padrão do EditorConfig é necessário alterar dentro do arquivo `.editorconfig`. É recomendável instalar também a extensão do EditorConfig em sua máquina local, o mesmo está disponível na loja de extensões do vsCode.
+
+### 	:desktop_computer: :electric_plug: :computer: Comunicação com a API
+
+Para fazer a comunicação com APIs o projeto seguirá utilizando o pacote Axios, que já será instalado ao usar o comando descrito na sessão "Iniciando". Esse pacote tem uma boa documentação e já é consolidado no meio de desenvolvimento. A documentação completa de como utilizar o mesmo pode ser encontrada no site: https://github.com/axios/axios
+
+### :globe_with_meridians: Compatibilidade com navegadores
+
+Para garantir a compatibilidade do projeto com navegadores antigos está sendo utilizado no projeto a extensão Eslint-Babel que faz a conversão de features mais recentes do Javascript para que funcionem mesmo para usuários que utilizam versões mais antigas dos navegadores.
+
+### :nail_care: Styled-components
+
+No projeto foi definido a utilização de Styled-components, para alterar alguma regra global ou verificar o reset de regras de estilo é necessário acessar o arquivo em `/src/globalStyles.js`
+
