@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: 'Lato', sans-serif;
+    color: #1e2a54;
   }
 `;
 
