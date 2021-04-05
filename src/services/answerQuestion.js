@@ -6,6 +6,9 @@ export default async function answerQuestion({ questionId, questionChoice }) {
       exercise_id: questionId,
       choice: questionChoice,
     })
-    .then((res) => res.data);
+    .then((res) => res.data)
+    .catch((err) => {
+      throw err;
+    });
   return result;
 }
