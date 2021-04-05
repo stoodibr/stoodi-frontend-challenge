@@ -93,7 +93,7 @@ Para garantir a compatibilidade do projeto com navegadores antigos está sendo u
 
 No projeto foi definido a utilização de Styled-components, para alterar alguma regra global ou verificar o reset de regras de estilo é necessário acessar o arquivo em `/src/globalStyles.js`
 
-### :nail_care: Testes
+### :test_tube: Testes
 
 Os testes para o projeto foram feitos utilizando as ferramentas de Testes nativas do próprio React, para executar os testes basta apenas executar o comando abaixo:
 
