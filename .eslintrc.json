@@ -6,6 +6,7 @@
   },
   "extends": ["plugin:react/recommended", "airbnb", "prettier"],
   "parserOptions": {
+    "parser": "babel-eslint",
     "ecmaFeatures": {
       "jsx": true
     },
@@ -14,7 +15,9 @@
   },
   "plugins": ["react", "prettier"],
   "rules": {
+    "react/prop-types": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "no-unused-vars": "off"
   }
 }
