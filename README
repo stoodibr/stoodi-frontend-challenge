@@ -3,7 +3,7 @@
 Este desafio consiste no desenvolvimento de uma tela para recuperar perguntas em uma API, deixar o usuário selecionar a resposta e validar a resposta na API, retornando na tela se o usuário acertou ou não a pergunta.
 
 Desenvolvedor {
-  nome: Paulo Marques,
+  nome: Paulo Marques Telles,
   e-mail: paulomarquestelles@gmail.com
   }
   
@@ -93,3 +93,8 @@ Para garantir a compatibilidade do projeto com navegadores antigos está sendo u
 
 No projeto foi definido a utilização de Styled-components, para alterar alguma regra global ou verificar o reset de regras de estilo é necessário acessar o arquivo em `/src/globalStyles.js`
 
+### :nail_care: Testes
+
+Os testes para o projeto foram feitos utilizando as ferramentas de Testes nativas do próprio React, para executar os testes basta apenas executar o comando abaixo:
+
+`yarn test`
