@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="question.css" >
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script type="text/javascript" src="question.js"></script>
+    </head>
+    <body>
+        <div class="question-container">
+            <h3 id="question-institution" class="question-header"></h3>
+            <div class="question-body">
+                <p id="question-text"></p>
+                <div class="question-alternative  before-submit">
+                    <input id="alt-a" type="radio" name="alternative" onclick="toggleButton()">
+                    <label for="alt-a" id="alt-a-label">
+                        <span class="question-alternative-letter"></span>
+                        <span class="question-alternative-letter"></span>
+                    </label>
+                </div>
+                <div class="question-alternative before-submit">
+                    <input id="alt-b" type="radio" name="alternative" onclick="toggleButton()">
+                    <label for="alt-b" id="alt-b-label">
+                        <span class="question-alternative-letter"></span>
+                        <span class="question-alt-content"></span>
+                    </label>
+                </div>
+                <div class="question-alternative  before-submit">
+                    <input id="alt-c" type="radio" name="alternative" onclick="toggleButton()">
+                    <label for="alt-c" id="alt-c-label">
+                        <span class="question-alternative-letter"></span>
+                        <span class="question-alt-content"></span>
+                    </label>
+                </div>
+                <div class="question-alternative  before-submit">
+                    <input id="alt-d" type="radio" name="alternative" onclick="toggleButton()">
+                    <label for="alt-d" id="alt-d-label">
+                        <span class="question-alternative-letter"></span>
+                        <span class="question-alt-content"></span>
+                    </label>
+                </div>
+            </div>
+            <div id="navigation">
+                <hr>
+                <div id="feedback-box" class="feedback-message single-button-nav">
+                    <button id="verify-answer" onclick="verifyAnswer()" disabled>Verificar resposta</button>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </body>
+</html>
