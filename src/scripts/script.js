@@ -1,31 +1,84 @@
-let requestURL = 'https://8zqqb4wng6.execute-api.us-east-1.amazonaws.com/dev/';
-let request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
+const url = 'https://8zqqb4wng6.execute-api.us-east-1.amazonaws.com/dev/';
+let questionsJson = fetchAPI();
+let exercises;
 
-request.onload = () => {
-    let exercises = request.response;
+async function fetchAPI () {
     
-    let text = (exercises.exercise.exercise_text);
-    let institution = (exercises.exercise.institution);
-    let alternatives = (exercises.exercise.alternatives);
+    let response = await fetch(url);
 
-    console.log(text, institution, alternatives);
+    if(response.ok) {
+        
+        let question = await response.json();
 
-    console.log(alternatives.length);
-    console.log(exercises.exercise.alternatives[0]);
+        exercises = {
+            exercise_id: question.exercise.exercise_id,
+            text: question.exercise.exercise_text,
+            institution: question.exercise.institution,
+            options: question.exercise.alternatives,
+            choice: null
+        }
+        
+        completeExercise();
+    }
+}
 
-    let output = ' ';
+const completeExercise = () => {
+    
+    document.getElementById('institution').innerHTML += exercises.institution;
 
-    for (let i = 0; i < alternatives.length; i++){
+    document.getElementById('question-text').innerHTML += exercises.text;
+
+    completeOptions();
+}
+
+const completeOptions = () => {
+
+    output = ' ';
+
+    for (let i = 0; i < exercises.options.length; i++){
         output +=
-        `<li><p><input type="radio" name="alternative" id="input" /><span class="option"><span class="value">${alternatives[i].letter}.</span>${alternatives[i].label}</span></p></li>`
+        `<li><p><input type="radio" name="alternative" id="${exercises.options[i].letter}" onclick="buttonValidate()"/><span class="option"><span class="value">${exercises.options[i].letter}.</span>${exercises.options[i].label}</span></p></li>`
     };
 
-    console.log(output);
-
     document.getElementById('question-options').innerHTML += output;
-    document.getElementById('question-text').innerHTML += text;
-    document.getElementById('institution').innerHTML += institution;
+}
+
+async function answerQuestion () {
+    
+    let question = {
+        exercise_id: exercises.exercise_id,
+        choice: selectedOption()
+    };
+
+    let response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify(question)
+    });
+
+    console.log(question);
+    
+    let answer = await response.json();
+    console.log (answer);
+
+    if(answer.is_correct) {
+        alert('uhu!');
+    }
+}
+
+const selectedOption = () => {
+    for (let i = 0; i < exercises.options.length; i++){
+        let choice = exercises.options[i].letter
+
+        if(document.getElementById(choice).checked){
+            return choice
+        }
+    }
+}
+
+const buttonValidate = () => {
+    document.getElementById('btn').removeAttribute('disabled');
 }
