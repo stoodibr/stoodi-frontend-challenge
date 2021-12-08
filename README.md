@@ -1,66 +1,30 @@
-# Desafio front-end do Stoodi
+# Sobre o Projeto
+Este é um teste para trabalhar como pessoa desenvolvedora front-end no Stoodi. 
 
-Olá!
-
-Este é um teste para trabalhar como pessoa desenvolvedora front-end no Stoodi.
-
-## Para participar desta parte do processo você deve:
-- Clonar esse repositório;
-- Criar uma branch com o nome observando o padrão `desafio-nome-sobrenome` (por exemplo: `desafio-maria-silva`);
-- Desenvolver a tarefa abaixo na branch que você criou;
-- Colocar no arquivo Readme: seu nome, email, instruções de como rodar o projeto e outras observações que julgar adequadas;
-- Ao terminar o desenvolvimento, abra um pull request para a branch `main`. Marque o usuário `thiagopadula` como revisor.
-
-## Objetivo:
-
+## Objetivo
 Criar um exercício de múltipla escolha usando HTML, CSS e Javascript. O aluno deve poder responder e saber se sua resposta está certa ou errada, e, se estiver errada, poder tentar novamente.
 
-## Composição da tela
+## Dados da participante do desafio
+* Author: Daniela Ferreira Feitosa 
+* E-mail: feitosaferreiradaniela@gmail.com
 
-- Enunciado da pergunta;
-- Quatro alternativas de resposta;
-- Botão para verificar a resposta;
-- Feedback sobre a resposta do aluno.
+## Instruções para executar o projeto:
 
-## Layout
-### Imagem 1:
+Na pasta raiz (stoodi-frontend-challenge), execute:
 
-![Cenário 1](https://static.stoodi.com.br/frontend-challenge/tela-1.png)
-___
+### `npm start`
 
-### Imagem 2:
+Assim você irá compilar localmente o projeto. Se caso uma nova guia não seja aberta, \ abra localhost no navegador [http://localhost:3000](http://localhost:3000).
 
-![Cenário 2](https://static.stoodi.com.br/frontend-challenge/tela-2.png)
-___
+## Projeto publicado
 
-### Imagem 3:
+O projeto também está publicado no github pages io caso opte por verificar a solução online e não localmente [Github.io](http://localhost:3000).
 
-![Cenário 3](https://static.stoodi.com.br/frontend-challenge/tela-3a.png)
-___
+# Mais informações
 
-### Imagem 4:
+## Configurações
+Para utilizar react embutido com esLint e Babel, inicializou-se o projeto com [Create React App](https://github.com/facebook/create-react-app). É mais como uma forma de agilizar a configuração do projeto e de quebra garantir boas práticas de código e compilação
 
-![Cenário 4](https://static.stoodi.com.br/frontend-challenge/tela-3b.png)
+## Padrões de messagem de commit
 
-___
-## Critérios
-
-- Você deve pegar as informações da pergunta dessa API: `https://8zqqb4wng6.execute-api.us-east-1.amazonaws.com/dev/`
-- As alternativas são exclusivas (o aluno não deve responder mais de uma ao mesmo tempo);
-- O botão "verificar resposta" deve estar desabilitado se nenhuma alternativa estiver selecionada (*imagem 1*);
-- O botão "verificar resposta" deve estar habilitado se uma alternativa estiver selecionada (*imagem 2*);
-- Ao clicar em "verificar resposta", o componente deve fazer um POST para `https://8zqqb4wng6.execute-api.us-east-1.amazonaws.com/dev/` com um objeto contendo os seguintes dados:
-    - `exercise_id` (tipo number)
-	- `choice` (tipo string, com a letra da alternativa selecionada)
-- O POST vai retornar uma propriedade `is_correct` que informa se a alternativa enviada era a correta. Se o aluno:
-    - Acertou a resposta: a linha da alternativa selecionada deve ficar verde e o botão deve ter o texto "próximo". Esse botão não tem nenhuma funcionalidade (*imagem 3*);
-    - Errou a resposta: a linha da alternativa selecionada deve ficar vermelha e o botão deve ter o texto "refazer" (*imagem 4*). Ao clicar nesse botão, a opção selecionada deve ficar desmarcada, o feedback de erro deve sumir e o botão deve ficar desabilitado (exatamente como quando o aluno acessa o exercício pela primeira vez).
-- A página deve ficar como no layout.
-
-## Observações
-
-- Deve-se usar HTML, CSS e Javascript. Fica a seu critério utilizar frameworks, bibliotecas ou pré-processadores, mas, se puder usar React, a gente prefere :)
-- Escrever testes é um diferencial;
-- A fonte utilizada no layout é a Lato (https://fonts.google.com/specimen/Lato);
-- Avaliaremos qualidade/funcionalidade do seu código e aderência ao layout. Desenvolva como se fosse um código de produção em um time e não uma prova ou script;
-- Estamos à disposição para ajudar com dúvidas ou dificuldades, é só entrar em contato :)
+Utilizou-se a folha de referência de formato de compromisso angular [Diretrizes de mensagens](https://gist.github.com/brianclements/841ea7bffdb01346392c)
