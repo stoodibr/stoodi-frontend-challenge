@@ -12,12 +12,12 @@ import URL from './server';
  * @abstract Check if the answer is correct
  */
 export const checkAnswer = (exercise_id, choice) => {
-    return fetch(URL + exercise_id, {
+    return fetch(URL, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: choice
+        body: JSON.stringify({exercise_id, choice})
     }).then(response => response.json())
         .catch(error => {
             throw error;
