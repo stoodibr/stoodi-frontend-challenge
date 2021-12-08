@@ -1,7 +1,64 @@
-html, body {
-  margin: 0;
+/** 
+ * @author: Daniela Ferreira Feitosa
+ * Github: https://github.com/ni-ela
+**/
+
+html,
+body {
+  margin: 8px;
   font-family: 'Lato', sans-serif;
   font-size: 10pt;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* remove all pre button styling*/
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+label,
+p {
+  font-size: 14px;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
+/* define size and responsive */
+form {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 100% !important;
+  }
+
+  #form-footer.correct,
+  #form-footer.wrong {
+    height: auto;
+    display: grid;
+    grid-template-columns: auto !important;
+    grid-template-rows: auto auto;
+  }
+
+  #form-footer.correct>button,
+  #form-footer.wrong>button {
+    left: 0;
+    margin-bottom: 14px;
+  }
+}
+
+@media (max-width: 550px) {
+  #form-button > button {
+    left: 90px;
+  }
 }
