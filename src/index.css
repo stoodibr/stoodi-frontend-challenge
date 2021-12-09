@@ -23,6 +23,12 @@ button {
   outline: inherit;
 }
 
+button:disabled{
+  background-color: #e7e6e6 !important;
+  color: #949494 !important;
+  cursor: default;
+}
+
 label,
 p {
   font-size: 14px;
@@ -42,16 +48,16 @@ form {
     width: 100% !important;
   }
 
-  #form-footer.correct,
-  #form-footer.wrong {
+  #form-footer.color-true,
+  #form-footer.color-false {
     height: auto;
     display: grid;
     grid-template-columns: auto !important;
     grid-template-rows: auto auto;
   }
 
-  #form-footer.correct>button,
-  #form-footer.wrong>button {
+  #form-footer.color-true>button,
+  #form-footer.color-false>button {
     left: 0;
     margin-bottom: 14px;
   }

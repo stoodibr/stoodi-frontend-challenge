@@ -1,6 +1,9 @@
 import './principal.css';
 import { useEffect, useState } from 'react';
-import { checkAnswer, getAsk } from '../services/requests';
+import { getAsk } from '../services/requests';
+import RadioButtonGroup from '../components/RadioButtonGroup';
+import { Provider } from '../components/Context';
+import Panel from '../components/Panel';
 
 /**
  * @name Principal
@@ -12,9 +15,6 @@ import { checkAnswer, getAsk } from '../services/requests';
  */
 function Principal() {
   const [ask, setAsk] = useState("");
-  const [choice, setChoice] = useState("");
-  const [is_correct, setIsCorrect] = useState(0);
-  const [disabled, setDisable] = useState(true);
 
   useEffect(() => {
     getAsk().then((res) => {
@@ -24,91 +24,16 @@ function Principal() {
     })
   }, []);
 
-  function saveChoice(choice) {
-    setDisable(false);
-    setIsCorrect(0);
-    setChoice(choice);
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (is_correct === 2) {
-      setIsCorrect(0);
-      setChoice(null);
-    } else {
-
-      checkAnswer(ask.exercise_id, choice).then((res) => {
-        setIsCorrect(res.is_correct ? 1 : 2);
-      })
-    }
-  }
-
-  function handleColor(option) {
-    if (option === choice) {
-      switch (is_correct) {
-        case 1:
-          return "correct";
-        case 2:
-          return "wrong";
-        default:
-          return "normal";
-      }
-
-    } else return "";
-  }
-
-  function handleButtonLabel() {
-    switch (is_correct) {
-      case 0:
-        return "VERIFICAR RESPOSTA";
-      case 1:
-        return "PRÓXIMO";
-      case 2:
-        return "REFAZER";
-      default:
-        return "";
-    }
-  }
 
   return (
-    <form id="principal" onSubmit={(e) => handleSubmit(e)}>
+        <form id="principal" onSubmit={(e) => e.preventDefault()} >
       <h2>{ask.institution}</h2>
-      <div dangerouslySetInnerHTML={{ __html: ask.exercise_text }}>
-      </div>
-      <div id="group-radio" >
-        {ask.alternatives?.map((alternative) =>
-          <div key={alternative?.letter} id="radio-option" className={handleColor(alternative.letter)}>
-            <input type="radio" id={alternative.letter} placeholder={alternative.letter + "" + alternative.label} onChange={() => saveChoice(alternative.letter)} name="answer" checked={choice === alternative.letter} value={alternative.letter} />
-            <label htmlFor="html"> {alternative.letter}. <font>{alternative.label}</font></label>
-          </div>
-        )}
-      </div>
-
-      <hr className="diviser"/>
-      <div id="form-footer"  className={is_correct === 1 ? "correct" : is_correct === 2? "wrong" : ""} >
-        {is_correct !== 0 &&
-          <div>
-            {is_correct === 1 ?
-              <p>
-                <b>
-                  Resposta correta
-                </b>
-                Boa! Acertou em cheio.
-              </p>
-              :
-              <p>
-                <b>
-                  Resposta incorreta
-                </b>
-                Que tal tentar novamente?
-              </p>
-            }
-          </div>
-        }
-        <button id="form-button" disabled={disabled} type="submit">{handleButtonLabel()}</button>
-
-      </div>
-        <hr className="diviser" />
+      <div dangerouslySetInnerHTML={{ __html: ask.exercise_text }} />
+      <Provider>
+        <RadioButtonGroup alt={ ask.alternatives } />
+        <Panel exercise_id={ ask.exercise_id }
+        />
+      </Provider>
     </form >
   );
 }

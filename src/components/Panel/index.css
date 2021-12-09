@@ -1,0 +1,38 @@
+#form-button {
+    background-color: #084BFB;
+    color: white;
+    border: solid 2px transparent;
+    border-radius: 30px;
+    font-weight: 600;
+    width: 180px;
+    justify-self: flex-end;
+}
+
+#form-footer>#form-button {
+    height: 40px;
+}
+
+#form-footer.color-null {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#form-footer {
+    align-items: center;
+    padding: 8px 22px;
+    height: 80px;
+}
+
+#form-footer.color-true,
+#form-footer.color-false {
+    grid-template-columns: 65% 35%;
+    display: grid;
+    justify-content: start;
+}
+
+
+hr.diviser {
+    border: 0;
+    margin: 0 !important;
+    border-top: 0.2px solid rgb(231, 231, 231);
+}
