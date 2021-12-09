@@ -11,6 +11,11 @@ Este é um teste para trabalhar como pessoa desenvolvedora front-end no Stoodi.
 - [ ] Colocar no arquivo Readme: seu nome, email, instruções de como rodar o projeto e outras observações que julgar adequadas;
 - [ ] Ao terminar o desenvolvimento, abra um pull request para a branch `main`. Marque o usuário `thiagopadula` como revisor.
 
+## Autora:
+
+Nome: Ana Luíza Guimarães
+E-mail: contato@analugmrs.com
+
 ## Objetivo:
 
 Criar um exercício de múltipla escolha usando HTML, CSS e Javascript. O aluno deve poder responder e saber se sua resposta está certa ou errada, e, se estiver errada, poder tentar novamente.
