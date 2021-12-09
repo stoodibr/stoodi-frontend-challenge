@@ -2,6 +2,15 @@ import React, { useState, createContext } from 'react'
 import { STATUS } from '../../config/enum';
 
 export const Context = createContext();
+
+/**
+ * @name Provider
+ * 
+ * @author: Daniela Ferreira Feitosa
+ * Github: https://github.com/ni-ela
+ * 
+ * @abstract To work with context to controll states from choice, disable, color, label and more
+ */
 export const Provider = ({ children }) => {
     const [isCorrect, setIsCorrect] = useState(null);
     const [choice, setChoice] = useState("");
@@ -13,6 +22,13 @@ export const Provider = ({ children }) => {
         setIsCorrect(value);
         setButtonLabel(STATUS[value]);
         getColor(value);
+    }
+
+    const toDefault = () => {
+        setChoice(null);
+        setButtonLabel("VERIFICAR RESPOSTA");
+        setIsCorrect(null);
+        setDisable(true);
     }
 
     const updateChoice = (value) => {
@@ -39,11 +55,12 @@ export const Provider = ({ children }) => {
         choice,
         updateChoice,
         color,
-        isCorrect,
         updateIsCorrect,
-        disable,
+        isCorrect,
         getColor,
-        buttonLabel, 
+        disable,
+        toDefault,
+        buttonLabel 
     }
 
     return <Context.Provider value={value}>{children}</Context.Provider>
