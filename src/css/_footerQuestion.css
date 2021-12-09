@@ -1,0 +1,29 @@
+#answer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1.3rem 1rem;
+}
+
+.answer-right {
+    background-color: #d4efe4;
+}
+
+.answer-wrong {
+    background-color: #ffe0d9;
+}
+
+#feedback {
+    font-weight: 700;
+}
+
+#message {
+    margin: 0;
+    padding: 0;
+}
+
+#answer-button {
+    display: grid;
+    justify-content: flex-end;
+}

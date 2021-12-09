@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+@import url('./css/_base.css');
+@import url('./css/_question.css');
+@import url('./css/_footerQuestion.css');
+@import url('./css/_input.css');
+@import url('./css/_button.css');
