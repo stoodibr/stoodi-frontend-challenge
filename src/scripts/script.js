@@ -27,7 +27,6 @@ async function fetchAPI () {
 const completeExercise = () => {
     
     document.getElementById('institution').innerHTML += exercises.institution;
-
     document.getElementById('question-text').innerHTML += exercises.text;
 
     completeOptions();
@@ -47,11 +46,11 @@ const completeOptions = () => {
 }
 
 button.onclick = () => {
-    if(button.innerText == "REFAZER"){
+    if (button.innerText == "REFAZER") {
         clear();
         button.classList.remove('button-validate');
         button.disabled = true;
-    } else if(button.innerText == "PRÓXIMO"){
+    } else if (button.innerText == "PRÓXIMO") {
         button.disabled = true;
     } else {
         answerQuestion();
@@ -73,14 +72,11 @@ async function answerQuestion () {
         },
         body: JSON.stringify(question)
     });
-
-    console.log(question);
     
     answer_position = `alternativa-${question.choice}`;
     let answer = await response.json();
-    console.log (answer);
 
-    if(answer.is_correct) {
+    if (answer.is_correct) {
         rightAnswer();
     } else {
         wrongAnswer();
@@ -88,18 +84,18 @@ async function answerQuestion () {
 }
 
 const selectedOption = () => {
-    for (let i = 0; i < exercises.options.length; i++){
+    for (let i = 0; i < exercises.options.length; i++) {
         let choice = exercises.options[i].letter;
 
-        if(document.getElementById(choice).checked){
+        if(document.getElementById(choice).checked) {
             return choice
         }
     }
 }
+
 const buttonValidate = () => {
     document.getElementsByName("alternative").forEach(element => {
-        if(!element.checked){
-            console.log(element.checked)
+        if (!element.checked) {
             button.classList.add('button-validate');
             button.removeAttribute('disabled');
         }
@@ -112,9 +108,7 @@ const rightAnswer = () => {
     document.getElementById('message').innerHTML = 'Boa! Acertou em cheio.';
 
     document.getElementById('answer').classList.add('answer-right');
-
-    document.getElementById(answer_position).classList.add('certo');
-    
+    document.getElementById(answer_position).classList.add('certo');    
     document.getElementById(answer_position).classList.add('answer-right'); 
 
     document.getElementsByName('alternative').forEach(alternative => {
@@ -123,8 +117,7 @@ const rightAnswer = () => {
         } 
     });
 
-    button.innerHTML = 'Próximo';
-    
+    button.innerHTML = 'Próximo';   
 }
 
 const wrongAnswer = () => {
@@ -134,7 +127,6 @@ const wrongAnswer = () => {
 
     document.getElementById('answer').classList.add('answer-wrong');
     document.getElementById(answer_position).classList.add('answer-wrong');
-
     document.getElementById(answer_position).classList.add('errado');
 
     document.getElementsByName('alternative').forEach(alternative => {
@@ -156,6 +148,7 @@ function clear () {
                 document.getElementById('answer').classList.remove('answer-wrong');
                 document.getElementById(answer_position).classList.remove('answer-wrong');
                 document.getElementById(answer_position).classList.remove('errado');
+                
                 document.getElementById('feedback').innerHTML = '';
                 document.getElementById('message').innerHTML = '';
                 button.innerHTML = 'Verificar questão';
