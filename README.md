@@ -9,7 +9,7 @@ Este é um teste para trabalhar como pessoa desenvolvedora front-end no Stoodi.
 - Criar uma branch com o nome observando o padrão `desafio-nome-sobrenome` (por exemplo: `desafio-maria-silva`);
 - Desenvolver a tarefa abaixo na branch que você criou;
 - Colocar no arquivo Readme: seu nome, email, instruções de como rodar o projeto e outras observações que julgar adequadas;
-- Ao terminar o desenvolvimento, abra um pull request para a branch `main`. Marque o usuário `thiagopadula` como revisor.
+- Ao terminar o desenvolvimento, abra um pull request para a branch `main`. Marque o usuário `dipnlik` como revisor.
 
 ## Objetivo:
 
