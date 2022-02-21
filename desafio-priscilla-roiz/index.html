@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>Desafio Stoodi</title>
+</head>
+<body>
+	
+	<div class="question">
+		<div class="question-content">
+
+			<h1 class="question-title">Stoodi</h1>
+
+			<form name="question_form" id="question_form" method="POST">
+				<input type="hidden" id="exercise_id" name="exercise_id"/>
+				<p id="exercise_text" class="question-text"></p>
+				<ul id="alternatives" class="question-options"></ul>
+
+				<hr>
+
+				<div class="answer-content">
+					<div class="answer-feedback-content" id="answer-feedback-content">
+						<p class="answer-feedback" id="answer-feedback">Resposta correta</p>
+						<p class="answer-feedback-msg" id="answer-feedback-msg">Boa! Acertou em cheio.</p>
+					</div>
+					
+					<input type="submit" class="answer-button" id="answer-button" value="Verificar Resposta"/>
+				</div>
+			</form>
+
+			<hr>
+		</div>
+	</div>
+
+
+	<script src="main.js"></script>
+</body>
+</html>
+

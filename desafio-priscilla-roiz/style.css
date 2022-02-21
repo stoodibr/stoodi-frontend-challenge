@@ -1,0 +1,149 @@
+* {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    color: #192b57;
+}
+
+hr {
+	border: none;
+    height: 1px;
+    background: #f1f1f1;
+	margin: 0;
+}
+
+label{
+	align-items: center;
+    display: flex;
+	padding: 10px 0;
+}
+
+ul{
+	padding: 0;
+}
+
+li {
+	list-style-type: none; 
+}
+
+
+.question{
+	background-color: lightgray ;
+	border-radius: 10px;
+	padding: 15px;
+	font-size: 18px;
+	max-width: 60%;
+	margin: 36px;
+
+}
+
+.answer-content{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 15px 20px;
+	align-items: center;
+	height: 54px;
+}
+
+input[type=radio] {
+	-webkit-appearance: none;
+	width: 1.25em;
+	height: 1.25em;
+	margin-inline-end: 1em;
+	margin-top: 0;
+	border-radius: 50%;
+	outline: none;
+	border: 1px solid #c0c0c0;
+}
+
+input[type=radio]:checked {
+	border: 1px solid #094bfa;
+	background: radial-gradient(#094bfa 45%, transparent 46%);
+}
+
+label input[type=radio]:checked+span{
+	color: #094bfa;
+}
+
+.alternative-correct {
+	background-color: #d4efe4; 
+}
+
+.alternative-correct input[type=radio]:checked {
+	border: 1px solid #02ba33;
+	background: radial-gradient(#02ba33 45%, transparent 46%);	
+}
+
+.alternative-correct input[type=radio]:checked+span{
+	color: #192b57;
+}
+.alternative-wrong {   
+    background-color: #ffe0d8;
+}
+
+.alternative-wrong input[type=radio]:checked {
+	border: 1px solid #ff6c41;
+	background: radial-gradient(#ff6c41 45%, transparent 46%);
+}
+
+.alternative-wrong input[type=radio]:checked+span{
+	color: #192b57;
+}
+
+.answer-feedback-content{
+	display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+	line-height: 0;
+}
+
+.answer-feedback{
+	font-weight: 700;
+	margin-bottom: 6px;
+	font-size: 0;
+}
+
+.answer-feedback-msg {
+	font-size: 0;
+}
+
+.answered {
+	font-size: 16px;
+}
+
+.answer-button{
+
+	background-color: #094bfa;
+	border-radius: 24px;	
+	color: #fafbfe;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	border: none;
+	font-size: 14px;
+	height: 40px;
+	min-width: 190px;
+	cursor: pointer;
+}
+
+.answer-button:disabled {
+    background-color: #ebebeb;
+    color: #9d9d9d;
+}
+
+@media (max-width: 767px) {
+
+	.question{
+		max-width: 100%;
+		margin: 10px;
+	}
+
+	.answer-content{
+		flex-direction: column;
+	}
+
+	.answer-feedback-content{
+		align-items: center;
+	}
+}

@@ -4,6 +4,11 @@ Olá!
 
 Este é um teste para trabalhar como pessoa desenvolvedora front-end no Stoodi.
 
+## Desafio Priscilla Roiz
+
+Nome: Priscilla Roiz
+Email: priscillagarcia02@hotmail.com
+
 ## Para participar desta parte do processo você deve:
 - Clonar esse repositório;
 - Criar uma branch com o nome observando o padrão `desafio-nome-sobrenome` (por exemplo: `desafio-maria-silva`);
