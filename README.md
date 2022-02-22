@@ -68,4 +68,4 @@ http://localhost:3000/
 
 The [MIT License](https://www.mit.edu/~amini/LICENSE.md) (MIT)
 
-Copyright :copyright: 2022 - Stoodi Chalenge
+Copyright :copyright: 2022 - Stoodi Challenge
