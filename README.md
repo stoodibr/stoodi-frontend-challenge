@@ -1,66 +1,71 @@
-# Desafio front-end do Stoodi
+<h1>Stoodi Challenge</h1>
 
-Olá!
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=next&message=framework&color=blue&style=for-the-badge&logo=nextdotjs"/>
+  <img src="https://img.shields.io/static/v1?label=scss&message=styles&color=ff69b4&style=for-the-badge&logo=sass"/>
+  <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
+</p>
 
-Este é um teste para trabalhar como pessoa desenvolvedora front-end no Stoodi.
+> Status do Projeto: :warning: (em análise).
 
-## Para participar desta parte do processo você deve:
-- Clonar esse repositório;
-- Criar uma branch com o nome observando o padrão `desafio-nome-sobrenome` (por exemplo: `desafio-maria-silva`);
-- Desenvolver a tarefa abaixo na branch que você criou;
-- Colocar no arquivo Readme: seu nome, email, instruções de como rodar o projeto e outras observações que julgar adequadas;
-- Ao terminar o desenvolvimento, abra um pull request para a branch `main`. Marque o usuário `dipnlik` como revisor.
+### Projeto desenvolvido por Peter Lourenço - lourenco.pet@gmail.com
 
-## Objetivo:
+### Tópicos
 
-Criar um exercício de múltipla escolha usando HTML, CSS e Javascript. O aluno deve poder responder e saber se sua resposta está certa ou errada, e, se estiver errada, poder tentar novamente.
+:small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
 
-## Composição da tela
+:small_blue_diamond: [Layout da Aplicação](#layout-da-aplicação)
 
-- Enunciado da pergunta;
-- Quatro alternativas de resposta;
-- Botão para verificar a resposta;
-- Feedback sobre a resposta do aluno.
+:small_blue_diamond: [Pré-requisitos](#pré-requisitos)
 
-## Layout
-### Imagem 1:
+:small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
-![Cenário 1](https://static.stoodi.com.br/frontend-challenge/tela-1.png)
-___
+:small_blue_diamond: [Licença](#licença)
 
-### Imagem 2:
+## Descrição do projeto
 
-![Cenário 2](https://static.stoodi.com.br/frontend-challenge/tela-2.png)
-___
+<p align="justify">
+  O objetivo do projeto é o de avaliar o método usado para solucionar um caso de uso da empresa. Em uma questão de múltipla escolha, o usuário deveria poder selecionar uma resposta, e caso estivesse errada, refazer a questão.
+</p>
 
-### Imagem 3:
+## Layout da Aplicação
 
-![Cenário 3](https://static.stoodi.com.br/frontend-challenge/tela-3a.png)
-___
+<img src="./public/images/exec.gif" alt="Execução da Aplicação" />
 
-### Imagem 4:
+## Pré-requisitos
 
-![Cenário 4](https://static.stoodi.com.br/frontend-challenge/tela-3b.png)
+:warning: [Node](https://nodejs.org/en/download/)
 
-___
-## Critérios
+## Como rodar a aplicação :arrow_forward:
 
-- Você deve pegar as informações da pergunta dessa API: `https://8zqqb4wng6.execute-api.us-east-1.amazonaws.com/dev/`
-- As alternativas são exclusivas (o aluno não deve responder mais de uma ao mesmo tempo);
-- O botão "verificar resposta" deve estar desabilitado se nenhuma alternativa estiver selecionada (*imagem 1*);
-- O botão "verificar resposta" deve estar habilitado se uma alternativa estiver selecionada (*imagem 2*);
-- Ao clicar em "verificar resposta", o componente deve fazer um POST para `https://8zqqb4wng6.execute-api.us-east-1.amazonaws.com/dev/` com um objeto contendo os seguintes dados:
-    - `exercise_id` (tipo number)
-	- `choice` (tipo string, com a letra da alternativa selecionada)
-- O POST vai retornar uma propriedade `is_correct` que informa se a alternativa enviada era a correta. Se o aluno:
-    - Acertou a resposta: a linha da alternativa selecionada deve ficar verde e o botão deve ter o texto "próximo". Esse botão não tem nenhuma funcionalidade (*imagem 3*);
-    - Errou a resposta: a linha da alternativa selecionada deve ficar vermelha e o botão deve ter o texto "refazer" (*imagem 4*). Ao clicar nesse botão, a opção selecionada deve ficar desmarcada, o feedback de erro deve sumir e o botão deve ficar desabilitado (exatamente como quando o aluno acessa o exercício pela primeira vez).
-- A página deve ficar como no layout.
+No terminal, clone o projeto:
 
-## Observações
+```
+git clone https://github.com/petlou/stoodi-frontend-challenge.git
+```
 
-- Deve-se usar HTML, CSS e Javascript. Fica a seu critério utilizar frameworks, bibliotecas ou pré-processadores, mas, se puder usar React, a gente prefere :)
-- Escrever testes é um diferencial;
-- A fonte utilizada no layout é a Lato (https://fonts.google.com/specimen/Lato);
-- Avaliaremos qualidade/funcionalidade do seu código e aderência ao layout. Desenvolva como se fosse um código de produção em um time e não uma prova ou script;
-- Estamos à disposição para ajudar com dúvidas ou dificuldades, é só entrar em contato :)
+Nesse projeto, utilizei o [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) como Package Manager, mas pode executar através do [NPM](https://www.npmjs.com/) sem problemas. <br>
+
+Para instalar as dependências rode o comando:
+
+```
+yarn
+```
+
+Após executado rode o seguinte para iniciar o projeto:
+
+```
+yarn dev
+```
+
+O projeto deverá ser executado em:
+
+```
+http://localhost:3000/
+```
+
+## Licença
+
+The [MIT License](https://www.mit.edu/~amini/LICENSE.md) (MIT)
+
+Copyright :copyright: 2022 - Stoodi Chalenge
