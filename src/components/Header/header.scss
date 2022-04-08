@@ -1,0 +1,36 @@
+#header {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8% !important;
+    background-color: var(--color-background-header);
+
+    h4 {
+        font-weight: 400 !important;
+        margin: 0 !important;
+        font-size: 1.6vh;
+        color: var(--color-primary)
+    }
+
+    #right-settings-top {
+        display: flex;
+        align-items: center;
+
+        .iconDarkActive,
+        .iconDarkInative,
+        .iconLightInative,
+        .iconLightActive {
+            font-size: 1.8vh;
+            margin: 0 1vh;
+        }
+
+        .iconDarkActive, .iconLightActive {
+            color: var(--color-secundary)
+        }
+
+        .iconDarkInative, .iconLightInative {
+            color: var(--color-silver)
+        }
+    }
+}

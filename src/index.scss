@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.light-mode{
+  --color-background: #f5f5f5;
+  --color-background-header: #e4e4e4;
+  --color-silver-light: rgb(223, 223, 223);
+  --color-silver: #ccc;
+  --color-primary: #192A57;
+  --color-secundary: #084BFB;
+  --color-light-success: #D4EFE4;
+  --color-dark-success: #00BB34;
+  --color-light-danger: #FFE0D9;
+  --color-dark-danger: #FF6C41;
+}
+
+.dark-mode{
+  --color-background: #131E3D;
+  --color-background-header: #0d162e;
+  --color-silver-light: rgb(88, 88, 88);
+  --color-silver: #1b2849;
+  --color-primary: #f5f5f5;
+  --color-secundary: #084BFB;
+  --color-light-success: #017448;
+  --color-dark-success: #00BB34;
+  --color-light-danger: #e99b8a;
+  --color-dark-danger: #FF6C41;
+}
